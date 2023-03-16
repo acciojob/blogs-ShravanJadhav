@@ -10,16 +10,16 @@ public class Image {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String description;
-    private String direction;
+    private String dimensions;
 
 
     public Image() {
     }
 
-    public Image(int id, String description, String direction) {
+    public Image(int id, String description, String dimensions) {
         this.id = id;
         this.description = description;
-        this.direction = direction;
+        this.dimensions = dimensions;
     }
 
 
@@ -39,12 +39,12 @@ public class Image {
         this.description = description;
     }
 
-    public String getDirection() {
-        return direction;
+    public String getDimensions() {
+        return  dimensions;
     }
 
-    public void setDirection(String direction) {
-        this.direction = direction;
+    public void setDimensions(String dimensions) {
+        this.dimensions = dimensions;
     }
 
     @ManyToOne

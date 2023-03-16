@@ -22,7 +22,7 @@ public class ImageService {
 
         Image image = new Image();
         image.setDescription(description);
-        image.setDirection(dimensions);
+        image.setDimensions(dimensions);
         image.setBlog(blog);
 
         blog.getImageList().add(image);
@@ -45,7 +45,7 @@ public class ImageService {
         //Find the number of images of given dimensions that can fit in a screen having `screenDimensions`
 
         Image image = imageRepository2.findById(id).get();
-        String dimensionOfImage = image.getDirection();
+        String dimensionOfImage = image.getDimensions();
 
         //dimension = Length x Breadth
         String[] totalScreen = screenDimensions.split("X");
